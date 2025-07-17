@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +14,11 @@ const Index = () => {
     email: '',
     message: ''
   });
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,41 +43,64 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Icon name="Zap" className="h-8 w-8 text-primary" />
+              <Icon name="Zap" className="h-8 w-8 text-primary floating" />
               <h1 className="text-2xl font-bold text-gray-900">АГАТ</h1>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#about" className="text-gray-700 hover:text-primary transition-colors">О компании</a>
-              <a href="#principles" className="text-gray-700 hover:text-primary transition-colors">Принципы</a>
-              <a href="#catalog" className="text-gray-700 hover:text-primary transition-colors">Каталог</a>
-              <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Контакты</a>
+              <a href="#about" className="text-gray-700 hover:text-primary transition-all duration-300 hover:scale-105">О компании</a>
+              <a href="#principles" className="text-gray-700 hover:text-primary transition-all duration-300 hover:scale-105">Принципы</a>
+              <a href="#catalog" className="text-gray-700 hover:text-primary transition-all duration-300 hover:scale-105">Каталог</a>
+              <a href="#contact" className="text-gray-700 hover:text-primary transition-all duration-300 hover:scale-105">Контакты</a>
             </nav>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Волноводные устройства
-              <br />
-              <span className="text-primary">нового поколения</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Полный цикл изготовления пассивных волноводных устройств, антенн и сложных антенных систем от дециметрового до миллиметрового диапазона
-            </p>
-            <Button 
-              onClick={scrollToContact}
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
-            >
-              Получить консультацию
-            </Button>
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className={`${isVisible ? 'fade-in' : 'opacity-0'}`}>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Волноводные устройства
+                <br />
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  нового поколения
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+                Полный цикл изготовления пассивных волноводных устройств, антенн и сложных антенных систем от дециметрового до миллиметрового диапазона
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={scrollToContact}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg pulse-glow transform hover:scale-105 transition-all duration-300"
+                >
+                  Получить консультацию
+                </Button>
+                <Button 
+                  variant="outline"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg transform hover:scale-105 transition-all duration-300"
+                >
+                  Узнать больше
+                </Button>
+              </div>
+            </div>
+            <div className={`${isVisible ? 'slide-up stagger-2' : 'opacity-0'} relative`}>
+              <div className="relative">
+                <img 
+                  src="/img/57225e37-f4c0-4019-bc78-8c38b3716bf8.jpg" 
+                  alt="Современное волноводное оборудование" 
+                  className="rounded-2xl shadow-2xl w-full h-auto floating"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 rounded-2xl"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
