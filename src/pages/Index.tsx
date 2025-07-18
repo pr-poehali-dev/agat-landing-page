@@ -43,14 +43,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <header role="banner" className="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <Icon name="Zap" className="h-8 w-8 text-primary floating" />
               <h1 className="text-2xl font-bold text-gray-900">АГАТ</h1>
             </div>
-            <nav className="hidden md:flex space-x-8">
+            <nav role="navigation" className="hidden md:flex space-x-8">
               <a href="#about" className="text-gray-700 hover:text-primary transition-all duration-300 hover:scale-105">О компании</a>
               <a href="#principles" className="text-gray-700 hover:text-primary transition-all duration-300 hover:scale-105">Принципы</a>
               <a href="#catalog" className="text-gray-700 hover:text-primary transition-all duration-300 hover:scale-105">Каталог</a>
@@ -61,7 +61,8 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 py-24 overflow-hidden">
+      <main>
+        <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -100,8 +101,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+        {/* About Section */}
+        <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -124,8 +125,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Principles Section */}
-      <section id="principles" className="py-20 bg-gray-50">
+        {/* Principles Section */}
+        <section id="principles" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">НАШИ ПРИНЦИПЫ</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -174,8 +175,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Catalog Section */}
-      <section id="catalog" className="py-20 bg-white">
+        {/* Catalog Section */}
+        <section id="catalog" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">КАТАЛОГ ПРОДУКЦИИ</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -184,8 +185,9 @@ const Index = () => {
                 <div className="relative mb-4">
                   <img 
                     src="https://cdn.poehali.dev/files/e6c5bc6a-7c2a-4b8c-b328-5c9010b960ce.png" 
-                    alt="Волноводные устройства" 
+                    alt="Волноводные устройства с фланцевыми соединениями АГАТ" 
                     className="w-full h-32 object-cover rounded-lg shadow-md"
+                    loading="lazy"
                   />
                 </div>
                 <CardTitle className="text-lg font-bold">Волноводные устройства</CardTitle>
@@ -209,8 +211,9 @@ const Index = () => {
                 <div className="relative mb-4">
                   <img 
                     src="/img/784887f1-ba8b-40aa-9d37-b05244392741.jpg" 
-                    alt="Антенные системы" 
+                    alt="Антенные системы для профессиональных применений АГАТ" 
                     className="w-full h-32 object-cover rounded-lg shadow-md"
+                    loading="lazy"
                   />
                 </div>
                 <CardTitle className="text-lg font-bold">Антенные системы</CardTitle>
@@ -234,8 +237,9 @@ const Index = () => {
                 <div className="relative mb-4">
                   <img 
                     src="/img/e3d097d4-5418-4aaf-934c-9ccd5e057be9.jpg" 
-                    alt="СВЧ-компоненты" 
+                    alt="СВЧ-компоненты и микроволновые устройства АГАТ" 
                     className="w-full h-32 object-cover rounded-lg shadow-md"
+                    loading="lazy"
                   />
                 </div>
                 <CardTitle className="text-lg font-bold">СВЧ-компоненты</CardTitle>
@@ -259,8 +263,9 @@ const Index = () => {
                 <div className="relative mb-4">
                   <img 
                     src="/img/acd14752-ad49-44a0-8e20-4eea169046c5.jpg" 
-                    alt="Индивидуальные решения" 
+                    alt="Индивидуальные решения и разработка по ТЗ АГАТ" 
                     className="w-full h-32 object-cover rounded-lg shadow-md"
+                    loading="lazy"
                   />
                 </div>
                 <CardTitle className="text-lg font-bold">Индивидуальные решения</CardTitle>
@@ -282,8 +287,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section id="contact" className="py-20 bg-gray-50">
+        {/* Contact Form Section */}
+        <section id="contact" className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">СВЯЗАТЬСЯ С НАМИ</h2>
@@ -442,10 +447,11 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer role="contentinfo" className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
