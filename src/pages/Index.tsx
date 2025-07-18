@@ -183,7 +183,7 @@ const Index = () => {
               <CardHeader className="text-center">
                 <div className="relative mb-4">
                   <img 
-                    src="/img/c60c9595-2852-44ca-b481-23b028ffc144.jpg" 
+                    src="https://cdn.poehali.dev/files/e6c5bc6a-7c2a-4b8c-b328-5c9010b960ce.png" 
                     alt="Волноводные устройства" 
                     className="w-full h-32 object-cover rounded-lg shadow-md"
                   />
