@@ -83,12 +83,7 @@ const Index = () => {
                 >
                   Получить консультацию
                 </Button>
-                <Button 
-                  variant="outline"
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg transform hover:scale-105 transition-all duration-300"
-                >
-                  Узнать больше
-                </Button>
+
               </div>
             </div>
             <div className={`${isVisible ? 'slide-up stagger-2' : 'opacity-0'} relative`}>
@@ -186,8 +181,12 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all hover:scale-105">
               <CardHeader className="text-center">
-                <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Radio" className="h-8 w-8 text-primary" />
+                <div className="relative mb-4">
+                  <img 
+                    src="/img/a80f55e4-29f2-4038-bf7d-e959a4e7ab0f.jpg" 
+                    alt="Волноводные устройства" 
+                    className="w-full h-32 object-cover rounded-lg shadow-md"
+                  />
                 </div>
                 <CardTitle className="text-lg font-bold">Волноводные устройства</CardTitle>
               </CardHeader>
@@ -207,8 +206,12 @@ const Index = () => {
 
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all hover:scale-105">
               <CardHeader className="text-center">
-                <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Antenna" className="h-8 w-8 text-primary" />
+                <div className="relative mb-4">
+                  <img 
+                    src="/img/784887f1-ba8b-40aa-9d37-b05244392741.jpg" 
+                    alt="Антенные системы" 
+                    className="w-full h-32 object-cover rounded-lg shadow-md"
+                  />
                 </div>
                 <CardTitle className="text-lg font-bold">Антенные системы</CardTitle>
               </CardHeader>
@@ -228,8 +231,12 @@ const Index = () => {
 
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all hover:scale-105">
               <CardHeader className="text-center">
-                <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Settings" className="h-8 w-8 text-primary" />
+                <div className="relative mb-4">
+                  <img 
+                    src="/img/e3d097d4-5418-4aaf-934c-9ccd5e057be9.jpg" 
+                    alt="СВЧ-компоненты" 
+                    className="w-full h-32 object-cover rounded-lg shadow-md"
+                  />
                 </div>
                 <CardTitle className="text-lg font-bold">СВЧ-компоненты</CardTitle>
               </CardHeader>
@@ -249,8 +256,12 @@ const Index = () => {
 
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all hover:scale-105">
               <CardHeader className="text-center">
-                <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Icon name="Wrench" className="h-8 w-8 text-primary" />
+                <div className="relative mb-4">
+                  <img 
+                    src="/img/acd14752-ad49-44a0-8e20-4eea169046c5.jpg" 
+                    alt="Индивидуальные решения" 
+                    className="w-full h-32 object-cover rounded-lg shadow-md"
+                  />
                 </div>
                 <CardTitle className="text-lg font-bold">Индивидуальные решения</CardTitle>
               </CardHeader>
@@ -353,10 +364,90 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Location Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">НАШ АДРЕС</h2>
+            <p className="text-lg text-gray-600">
+              Мы находимся в Смоленске и готовы принять вас в нашем офисе
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="bg-gray-50 rounded-2xl p-8">
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="MapPin" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900">Адрес офиса</h3>
+                      <p className="text-gray-600">
+                        г. Смоленск, ул. Тенишевой, д. 22
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="Phone" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900">Телефон</h3>
+                      <p className="text-gray-600">
+                        +7 (4812) 123-45-67
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="Mail" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900">Email</h3>
+                      <p className="text-gray-600">
+                        info@agat-smolensk.ru
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="Clock" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg text-gray-900">Режим работы</h3>
+                      <p className="text-gray-600">
+                        Пн-Пт: 9:00 - 18:00<br/>
+                        Сб-Вс: выходной
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-100 rounded-2xl p-4">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A7b3a9d9c7e9f4b2a8c6d1e3f5g7h9i0j&source=constructor"
+                width="100%"
+                height="400"
+                className="rounded-lg"
+                style={{border: 'none'}}
+                title="Карта офиса АГАТ в Смоленске"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Icon name="Zap" className="h-6 w-6 text-primary" />
@@ -365,6 +456,19 @@ const Index = () => {
               <p className="text-gray-400">
                 Производство волноводных устройств, антенн и антенных систем высокого качества
               </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Контакты</h4>
+              <div className="space-y-2 text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Icon name="Phone" className="h-4 w-4" />
+                  <span>+7 (4812) 123-45-67</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Icon name="Mail" className="h-4 w-4" />
+                  <span>info@agat-smolensk.ru</span>
+                </div>
+              </div>
             </div>
             <div className="text-right">
               <p className="text-gray-400">
