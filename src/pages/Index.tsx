@@ -183,7 +183,7 @@ const Index = () => {
               <CardHeader className="text-center">
                 <div className="relative mb-4">
                   <img 
-                    src="/img/a80f55e4-29f2-4038-bf7d-e959a4e7ab0f.jpg" 
+                    src="/img/c60c9595-2852-44ca-b481-23b028ffc144.jpg" 
                     alt="Волноводные устройства" 
                     className="w-full h-32 object-cover rounded-lg shadow-md"
                   />
@@ -432,12 +432,12 @@ const Index = () => {
             
             <div className="bg-gray-100 rounded-2xl p-4">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A7b3a9d9c7e9f4b2a8c6d1e3f5g7h9i0j&source=constructor"
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A54.771575%2C32.057378%2C16z&amp;source=constructor&amp;scroll=true"
                 width="100%"
                 height="400"
                 className="rounded-lg"
                 style={{border: 'none'}}
-                title="Карта офиса АГАТ в Смоленске"
+                title="Карта офиса АГАТ в Смоленске - ул. Тенишевой, д. 22"
               ></iframe>
             </div>
           </div>
